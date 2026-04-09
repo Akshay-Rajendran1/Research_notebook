@@ -45,7 +45,7 @@ Programmers will need to interact with a Packet Pool Object.
   * Descriptor Size: would a 16 byte descriptor be enough for the obj id + offset?
   * What capabilities are required for DMA?
 * During implementation
-  * Ideal sping time
+  * Ideal spin-wait time
 * Out of scope
   * Encryption
   

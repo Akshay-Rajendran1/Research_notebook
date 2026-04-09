@@ -1,0 +1,2 @@
+WEEK 2
+I looked into zero copy and the files in twizzler that are related to that, I found that the virtuo net smoltcp files had that kind of information. I am looking at what I have to use for it, and I saw something about Rtokens and T tokens I am not sure what it is about.

@@ -45,10 +45,12 @@ Programmers will need to interact with a Packet Pool Object.
   * Descriptor Size: would a 16 byte descriptor be enough for the obj id + offset?
   * What capabilities are required for DMA?
 * During implementation
-  * Ideal spin-wait time
+  * Ideal spin-wait time to make sure it keeps pollinig till it gets a response before going to sleep.
+  * How should it handdle the packet pool being full should it drop the incoming packets
 * Out of scope
-  * Encryption
+  * Encryption is not the current goal but could be interesting to look at.
+  * Remote accessing the direct memory 
   
 # Future possibilities
-* Hardware offloaded plugins (eg Checksum offloaded)
+* Hardware offloaded plugins (eg Checksum offloaded), can also do encryption like this.
 

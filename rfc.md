@@ -37,9 +37,11 @@ Programmers will need to interact with a Packet Pool Object.
 # Prior art
 * Linux has DPDK which can be used as a bypass tool to let userspace apps talk directly to the NIC.
   * The main issue with this is that it is difficult to set up and it breaks the OS security.
-* Arrakis os is another research os that splits the job into os deals with perms and apps deal with data.
-  * Similar to Twizzlers net-srv as that checks the perms while apps communicate over the data plane.
-
+  * This works by moving the data path way into the user space from the kernel.
+* Arraks os is another research os that splits the job into os deals with perms and apps deal with data.
+  * Similar to Twizzlers net-srv as that it checks the perms while apps communicate over the data plane.
+  * Made becasue currently a lot of applications are "practically their own mini operating systems".
+ 
 # Unresolved questions
 * To resolve before merging
   * Descriptor Size: would a 16 byte descriptor be enough for the obj id + offset?

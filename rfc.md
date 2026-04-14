@@ -51,8 +51,11 @@ Programmers will need to interact with a Packet Pool Object.
   * How should it handdle the packet pool being full should it drop the incoming packets
 * Out of scope
   * Encryption is not the current goal but could be interesting to look at.
-  * Remote accessing the direct memory 
-  
+  * Remote accessing the direct memory
+ 
 # Future possibilities
 * Hardware offloaded plugins (eg Checksum offloaded), can also do encryption like this.
 
+# Deliverables
+* Week 6: I have a program that sends a request that is actually zero-copy.
+* Week 10: Benchmark comparision from the start and after zero-copy is implimented!!!

@@ -1,6 +1,6 @@
 # My understanding of the current twizzler network stack
 
-
+NEEDS TO BE UPDATED BASED ON HOW THE MEMORY WORKS
 General flow (RX)
 The physical network card receives an electrical signal and uses DMA to write the raw packet to the OS buffer. The device_thread in net-srv wakes up.
 device.rs in net-srv loops through connected apps and copies the packet into the specific application's shared memory ring buffer (rx_buf).
@@ -8,6 +8,7 @@ The application's background Engine thread wakes up, seeing new data on its shar
 smoltcp reads the shared memory, parses the packet (IP/Port), and sorts the data into the correct internal Socket buffer.
 The Waiters system wakes the sleeping user thread. The app thread reads the payload directly from the socket buffer.
 
+NEEDS TO BE UPDATED BASED ON HOW THE MEMORY WORKS
 General flow (TX)
 The user application calls write() on a socket, placing raw data into the smoltcp socket buffer. It calls self.wake() to alert the Engine.
 The app's background Engine thread wakes up. smoltcp wraps the raw data in TCP/IP and Ethernet headers to create a full packet.
